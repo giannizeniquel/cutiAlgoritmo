@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Cuti Algoritmo</title>
+
+</head>
+
+<body>
+    <main class="container">
+        <div class="row">
+            <h1>Cuti Algoritmo</h1>
+            <div class="col-sm-6">
+                <div class="card">
+                    <!-- <img src="https://files.fm/thumb_show.php?i=da4pxy42p" title="Cuti Dev"> -->
+                    <img src="img\Screenshot 2023-04-14 143824 cute.png" title="Cuti Dev">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <a id="reiniciar" href="#" class="btn btn-primary" onclick="reset()">Reiniciar</a>
+                <br><br>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Corre?</h5>
+                        <a id="correSi" href="#" class="btn btn-primary" onclick="corre(true)">Si</a>
+                        <a id="correNo" href="#" class="btn btn-primary" onclick="corre(false)">No</a>
+                    </div>
+                </div>
+
+                <div id="div_equipo" class="col-sm-12 oculto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Es de tu equipo?</h5>
+                            <a id="equipoSi" href="#" class="btn btn-primary" onclick="pasa(true)">Si</a>
+                            <a id="equipoNo" href="#" class="btn btn-primary" onclick="pasa(false)">No</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="div_pasa" class="col-sm-12 oculto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Pasa</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="div_pegale" class="col-sm-12 oculto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Pegale por las dudas</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <div>
+        <div id="twoseven-ext-tab-media-modal" class="twoseven-ext-tab-media-modal" style="display: none;">
+            <!-- Modal content -->
+            <div class="twoseven-ext-tab-media-modal-content">
+                <div class="iframe-container" style="height: 100%; width: 100%;">
+                    <span class="close">×</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <section class="">
+            <!-- Footer -->
+            <footer class="text-center text-white" style="background-color: #0a4275;">
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">© 2023 Copyright:
+                    <a class="text-white" href="https://github.com/giannizeniquel" rel="noopener" target="_blank">Gianni Ivan Zeniquel</a>
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- Footer -->
+        </section>
+    </div>
+    <style>
+        .oculto{
+            display: none;
+        }
+    </style>
+    <script>
+        function corre(e) {
+            let div_equipo = document.getElementById('div_equipo');
+            let div_pegale = document.getElementById('div_pegale');
+            if (e) {
+                div_equipo.style.display = 'block';
+                div_pegale.style.display = 'none';
+            } else {
+                div_equipo.style.display = 'none';
+                div_pegale.style.display = 'block';
+            }
+        }
+
+        function pasa(e) {
+            let div_pasa = document.getElementById('div_pasa');
+            let div_pegale = document.getElementById('div_pegale');
+            if (e) {
+                div_pasa.style.display = 'block';
+                div_pegale.style.display = 'none';
+            } else {
+                div_pasa.style.display = 'none';
+                div_pegale.style.display = 'block';
+            }
+        }
+
+        function reset() {
+            document.getElementById('div_equipo').style.display = 'none';
+            document.getElementById('div_pasa').style.display = 'none';
+            document.getElementById('div_pegale').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
